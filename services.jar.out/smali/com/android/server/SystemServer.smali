@@ -145,6 +145,9 @@
 .method public static main([Ljava/lang/String;)V
     .locals 1
 
+    .prologue
+    invoke-static {}, Lmiui/patchrom/ClassHook;->initServerHook()V
+
     new-instance v0, Lcom/android/server/SystemServer;
 
     invoke-direct {v0}, Lcom/android/server/SystemServer;-><init>()V
