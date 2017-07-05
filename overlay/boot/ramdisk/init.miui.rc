@@ -1,0 +1,35 @@
+# miui init rc
+
+service shelld /system/xbin/shelld
+    class main
+
+service fdpp /system/bin/fdpp daemon
+    class main
+    user root
+    group root
+
+service tunman /system/xbin/tunman
+    socket tunman stream 0666 system system
+    class main
+    disabled
+
+on property:net.svc.tunman=start
+    start tunman
+
+# service for su
+service su_daemon /system/xbin/su --daemon
+    class main
+
+# for theme
+on post-fs-data
+    mkdir /data/system/theme 0755 theme theme
+    chown theme theme /data/system/theme
+    chmod 0755 /data/system/theme
+    restorecon /data/system/theme
+    chown theme theme /data/system/theme/lock_wallpaper
+    chmod 0755 /data/system/theme/lock_wallpaper
+    restorecon /data/system/theme/lock_wallpaper
+    mkdir /data/system/theme_magic 0755 theme theme
+    chown theme theme /data/system/theme_magic
+    chmod 0775 /data/system/theme_magic
+    restorecon /data/system/theme_magic
