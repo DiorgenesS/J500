@@ -47360,22 +47360,7 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     move-result-object v0
-    
-    if-nez v0, :cond_miui_2
-    
-    invoke-static {}, Lmiui/securityspace/XSpaceUserHandle;->isXSpaceUserCalling()Z
 
-    move-result v9
-
-    if-eqz v9, :cond_miui_2
-
-    or-int/lit16 p2, p2, 0x2000
-
-    invoke-direct {p0, p1, p2, p3}, Lcom/android/server/pm/PackageManagerService;->generateApplicationInfoFromSettingsLPw(Ljava/lang/String;II)Landroid/content/pm/ApplicationInfo;
-
-    move-result-object v0
-    
-    :cond_miui_2
     monitor-exit v1
 
     return-object v0
@@ -59206,7 +59191,7 @@
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string
+    const-string v9, "Unknown target package: "
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
