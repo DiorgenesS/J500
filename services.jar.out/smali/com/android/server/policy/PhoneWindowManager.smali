@@ -25057,20 +25057,6 @@
     goto :goto_0
 .end method
 
-.method public showBootMessage(Ljava/lang/CharSequence;Z)V
-    .locals 2
-
-    iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager;->mHandler:Landroid/os/Handler;
-
-    new-instance v1, Lcom/android/server/policy/PhoneWindowManager$24;
-
-    invoke-direct {v1, p0, p1}, Lcom/android/server/policy/PhoneWindowManager$24;-><init>(Lcom/android/server/policy/PhoneWindowManager;Ljava/lang/CharSequence;)V
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    return-void
-.end method
-
 .method public showGlobalActions()V
     .locals 2
 
