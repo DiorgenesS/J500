@@ -49,6 +49,9 @@
 .method public static schedule(Landroid/content/Context;J)V
     .locals 7
 
+    .prologue
+    return-void
+ 
     const/4 v5, 0x1
 
     const-string/jumbo v2, "jobscheduler"

@@ -751,7 +751,7 @@
 
     move-result v7
 
-    if-ltz v7, :cond_0
+    if-ltz v7, :cond_2
 
     move-object/from16 v0, p0
 
@@ -771,7 +771,7 @@
 
     iput-wide v0, v2, Lcom/android/server/backup/BackupManagerService$FullRestoreEngine;->mBytes:J
 
-    :cond_0
+    .line 5194
     const/16 v19, 0x0
 
     move/from16 v0, v19
