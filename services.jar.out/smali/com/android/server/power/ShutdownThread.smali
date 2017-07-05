@@ -1007,50 +1007,13 @@
 .end method
 
 .method private static getUiContext(Landroid/content/Context;)Landroid/content/Context;
-    .locals 3
+    .locals 1
+    .param p0, "context"    # Landroid/content/Context;
 
-    const/4 v0, 0x0
-
-    if-eqz p0, :cond_0
-
-    invoke-static {p0}, Lorg/cyanogenmod/internal/util/ThemeUtils;->createUiContext(Landroid/content/Context;)Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
-
-    move-result-object v1
-
-    const-string/jumbo v2, "android.hardware.type.television"
-
-    invoke-virtual {v1, v2}, Landroid/content/pm/PackageManager;->hasSystemFeature(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    const v1, 0x10304a3
-
-    invoke-virtual {v0, v1}, Landroid/content/Context;->setTheme(I)V
-
-    :cond_0
-    :goto_0
-    if-eqz v0, :cond_2
-
-    :goto_1
-    return-object v0
-
-    :cond_1
-    const v1, 0x10302e0
-
-    invoke-virtual {v0, v1}, Landroid/content/Context;->setTheme(I)V
-
-    goto :goto_0
-
-    :cond_2
+    .prologue
     move-object v0, p0
 
-    goto :goto_1
+    return-object v0
 .end method
 
 .method private static isAdvancedRebootPossible(Landroid/content/Context;)Z
