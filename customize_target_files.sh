@@ -17,3 +17,7 @@ fi
 #Added file_contexts to ROM
 cp -f other/file_contexts out/target_files/META/
 rm -rf out/target_files/SYSTEM/vendor/preinstall
+
+#Added device features
+echo "Added new devices features"
+cp -f other/j5lte.xml out/target_files/SYSTEM/etc/device_features
