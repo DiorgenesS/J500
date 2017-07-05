@@ -1463,7 +1463,7 @@
 
     move-result v2
 
-    invoke-direct {p0, v2}, Lcom/android/server/AlarmManagerService;->publishNextAlarmCustomTile(I)V
+    #invoke-direct {p0, v2}, Lcom/android/server/AlarmManagerService;->publishNextAlarmCustomTile(I)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -2273,7 +2273,7 @@
 
     move-result v7
 
-    invoke-direct {p0, v7}, Lcom/android/server/AlarmManagerService;->publishNextAlarmCustomTile(I)V
+    #invoke-direct {p0, v7}, Lcom/android/server/AlarmManagerService;->publishNextAlarmCustomTile(I)V
 
     :cond_4
     const/4 v3, 0x0
