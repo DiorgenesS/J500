@@ -273,6 +273,18 @@
     .end annotation
 .end field
 
+.field public protectedBroadcasts:Landroid/util/ArrayMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/util/ArrayMap",
+            "<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 .field public final providers:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
