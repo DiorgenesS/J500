@@ -1178,15 +1178,15 @@
 
     iput-object v3, p0, Lcom/android/server/wm/WindowManagerService;->mFocusedApp:Lcom/android/server/wm/AppWindowToken;
 
-    const/high16 v3, 0x3f000000    # 0.5f
+    const/high16 v3, 0x3f800000    # 1.0f
 
     iput v3, p0, Lcom/android/server/wm/WindowManagerService;->mWindowAnimationScaleSetting:F
 
-    const/high16 v3, 0x3f000000    # 0.5f
+    const/high16 v3, 0x3f800000    # 1.0f
 
     iput v3, p0, Lcom/android/server/wm/WindowManagerService;->mTransitionAnimationScaleSetting:F
 
-    const/high16 v3, 0x3f000000    # 0.5f
+    const/high16 v3, 0x3f800000    # 1.0f
 
     iput v3, p0, Lcom/android/server/wm/WindowManagerService;->mAnimatorDurationScaleSetting:F
 
